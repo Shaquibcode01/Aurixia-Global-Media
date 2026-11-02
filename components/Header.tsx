@@ -16,7 +16,8 @@ export default function Header() {
     const on = () => {
       const y = scrollY;
       setScrolled(y > 20);
-      setHide(y > 400 && y > last.current + 4 && !open);
+      const mobile = innerWidth <= 900;
+      setHide(!mobile && y > 400 && y > last.current + 4 && !open);
       if (y < last.current - 4) setHide(false);
       last.current = y;
     };
@@ -25,6 +26,13 @@ export default function Header() {
   }, [open]);
 
   useEffect(() => setOpen(false), [path]);
+  useEffect(() => {
+    const esc = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    const resize = () => innerWidth > 900 && setOpen(false);
+    addEventListener("keydown", esc);
+    addEventListener("resize", resize);
+    return () => { removeEventListener("keydown", esc); removeEventListener("resize", resize); };
+  }, []);
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
   }, [open]);
@@ -40,16 +48,20 @@ export default function Header() {
             ))}
             <Link href="/contact" className="btn btn-outline sm">Get Started</Link>
           </nav>
-          <button className={`burger ${open ? "open" : ""}`} aria-label="Menu" aria-expanded={open} onClick={() => setOpen(!open)}>
+          <button type="button" className={`burger ${open ? "open" : ""}`} aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen((o) => !o)}>
             <span /><span /><span />
           </button>
         </div>
       </header>
-      <div className={`mobile-menu ${open ? "open" : ""}`}>
+      <div className={`mobile-menu ${open ? "open" : ""}`} aria-hidden={!open} onClick={(e) => e.target === e.currentTarget && setOpen(false)}>
+        <span className="menu-top">AURIXIA</span>
+        <button type="button" className="menu-close" aria-label="Close menu" onClick={() => setOpen(false)}>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round"><path d="M5 5l14 14M19 5L5 19" /></svg>
+        </button>
         {NAV.map((n) => (
           <Link key={n.href} href={n.href} className={path.startsWith(n.href) ? "active" : ""} onClick={() => setOpen(false)}>{n.label}</Link>
         ))}
-        <Link href="/contact" className="btn btn-gold" style={{ marginTop: 24, alignSelf: "flex-start" }} onClick={() => setOpen(false)}>Get Started</Link>
+        <Link href="/contact" className="btn btn-gold" onClick={() => setOpen(false)}>Get Started</Link>
       </div>
     </>
   );
