@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Image from "next/image";
+import GrowthArt from "@/components/GrowthArt";
 import CtaBand from "@/components/CtaBand";
 import Stats from "@/components/Stats";
 import { Reveal, SplitText } from "@/components/Reveal";
@@ -33,15 +33,13 @@ export default function About() {
       <section className="section" style={{ paddingTop: 0 }}>
         <div className="wrap about-split">
           <Reveal dir="left">
-            <div className="logo-stage">
-              <Image src="/logo-crop.jpg" alt="Aurixia Global Media logo — a tree of coins held in open hands" width={900} height={640} priority />
-            </div>
+            <GrowthArt />
           </Reveal>
           <Reveal dir="right">
-            <span className="eyebrow">The mark</span>
-            <h2 className="h2" style={{ margin: "14px 0 22px" }}>A tree of growth, <span className="gold">held in open hands.</span></h2>
-            <p className="lead" style={{ marginBottom: 18 }}>Our logo says what we do. Open hands nurture a tree whose fruit is value — every coin a result earned through patient, careful cultivation.</p>
-            <p className="lead">Navy for trust and depth. Gold for the returns we deliver. Together, they&apos;re the promise behind every campaign: your growth, cared for like our own.</p>
+            <span className="eyebrow">Our philosophy</span>
+            <h2 className="h2" style={{ margin: "14px 0 22px" }}>Growth, <span className="gold">cultivated with care.</span></h2>
+            <p className="lead" style={{ marginBottom: 18 }}>Real growth isn&apos;t a hack. It&apos;s patient, compounding work — testing, learning and doubling down on what the data proves.</p>
+            <p className="lead">Trust is the foundation and returns are the outcome. That&apos;s the promise behind every campaign: your growth, handled like our own.</p>
           </Reveal>
         </div>
       </section>
