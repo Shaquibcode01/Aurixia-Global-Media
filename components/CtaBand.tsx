@@ -3,6 +3,7 @@ import { useRef } from "react";
 import MagneticLink from "./Magnetic";
 import Icon from "./Icons";
 import { SplitText } from "./Reveal";
+import { SITE } from "@/lib/site";
 
 export default function CtaBand({ variant = "center" }: { variant?: "center" | "audit" | "portfolio" }) {
   const ref = useRef<HTMLElement>(null);
@@ -22,7 +23,7 @@ export default function CtaBand({ variant = "center" }: { variant?: "center" | "
           </div>
           <div className="cta-row">
             <MagneticLink href="/contact" className="btn btn-gold">Get a free audit <Icon name="arrow" size={18} /></MagneticLink>
-            <a href="tel:+919876543210" className="btn btn-ghost"><Icon name="phone" size={18} /> Call us</a>
+            <a href={SITE.phoneHref} className="btn btn-ghost"><Icon name="phone" size={18} /> Call us</a>
           </div>
         </div>
       </section>

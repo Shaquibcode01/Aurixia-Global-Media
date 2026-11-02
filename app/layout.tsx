@@ -11,7 +11,7 @@ const dm = DM_Sans({ subsets: ["latin"], variable: "--font-dm", display: "swap" 
 const playfair = Playfair_Display({ subsets: ["latin"], weight: ["500", "600", "700"], variable: "--font-playfair", display: "swap" });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://aurixia.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://aurixiaglobalmedia.com"),
   title: { default: "Aurixia Global Media — Digital Marketing Agency, Delhi NCR", template: "%s | Aurixia Global Media" },
   description: "Aurixia Global Media is a Delhi NCR digital marketing agency turning ambitious brands into category leaders through SEO, performance marketing, social, content and brand identity.",
   openGraph: { title: "Aurixia Global Media", description: "We build brands that move.", type: "website", images: ["/logo-crop.jpg"] },

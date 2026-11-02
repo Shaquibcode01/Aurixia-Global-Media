@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { NAV } from "@/lib/data";
+import { SITE } from "@/lib/site";
 
 export default function Footer() {
   return (
@@ -8,7 +9,7 @@ export default function Footer() {
       <div className="wrap">
         <div className="foot-grid">
           <div>
-            <Image className="footer-logo" src="/logo-crop.jpg" alt="Aurixia Global Media" width={150} height={107} />
+            <Image className="footer-logo" src="/logo-crop.jpg" alt="Aurixia Global Media" width={900} height={640} />
             <p>Ideas that move brands forward. Digital marketing built for brands that refuse to blend in.</p>
           </div>
           <div>
@@ -18,8 +19,9 @@ export default function Footer() {
           <div>
             <h5>Connect</h5>
             <ul>
-              <li><p>Delhi NCR, India</p></li>
-              <li><a href="mailto:hello@aurixia.com">hello@aurixia.com</a></li>
+              <li><p>{SITE.address}</p></li>
+              <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+              <li><a href={SITE.phoneHref}>{SITE.phone}</a></li>
             </ul>
             <div className="socials">
               <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
@@ -30,7 +32,7 @@ export default function Footer() {
         </div>
         <div className="foot-bottom">
           <span>© {new Date().getFullYear()} Aurixia Global Media. All rights reserved.</span>
-          <span>Delhi NCR · Digital Marketing Agency</span>
+          <span>New Delhi · Digital Marketing Agency</span>
         </div>
       </div>
     </footer>

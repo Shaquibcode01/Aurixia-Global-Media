@@ -3,13 +3,14 @@ import ContactForm from "@/components/ContactForm";
 import Faq from "@/components/Faq";
 import Icon from "@/components/Icons";
 import { SplitText } from "@/components/Reveal";
+import { SITE } from "@/lib/site";
 
 export const metadata: Metadata = { title: "Contact", description: "Talk to Aurixia Global Media about your growth goals. Most clients start with a free audit." };
 
-const INFO = [
-  ["pin", "4th Floor, Tower B, Cyber Hub, DLF Cyber City, Gurugram, Haryana 122002"],
-  ["phone", "+91 98765 43210"],
-  ["mail", "hello@aurixia.com"],
+const INFO: [string, string, string?][] = [
+  ["pin", SITE.address],
+  ["phone", SITE.phone, SITE.phoneHref],
+  ["mail", SITE.email, `mailto:${SITE.email}`],
   ["clock", "Mon – Fri, 9:30 AM – 7:00 PM IST"],
 ];
 
@@ -30,7 +31,7 @@ export default function Contact() {
           <aside>
             <div className="visit">
               <h3 className="h3">Visit us</h3>
-              <ul>{INFO.map(([ic, t]) => <li key={t}><span className="ib"><Icon name={ic} size={18} /></span><span>{t}</span></li>)}</ul>
+              <ul>{INFO.map(([ic, t, href]) => <li key={t}><span className="ib"><Icon name={ic} size={18} /></span>{href ? <a href={href}>{t}</a> : <span>{t}</span>}</li>)}</ul>
             </div>
             <Faq />
           </aside>

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Icon from "./Icons";
 import { SERVICES } from "@/lib/data";
+import { SITE } from "@/lib/site";
 
 type Errors = Partial<Record<"name" | "email" | "message", string>>;
 
@@ -58,7 +59,8 @@ export default function ContactForm() {
       </div>
       <div className="f">
         <label htmlFor="phone">Phone number</label>
-        <input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" autoComplete="tel" />
+        <input id="phone" name="phone" type="tel" placeholder="+91 89290 93251" autoComplete="tel" />
+
       </div>
       <div className="row2">
         <div className="f">
@@ -86,7 +88,7 @@ export default function ContactForm() {
       <button className="btn btn-gold" disabled={state === "sending"}>
         {state === "sending" ? "Sending…" : "Send message"} <Icon name="arrow" size={18} />
       </button>
-      {state === "fail" && <p style={{ color: "#c0392b", marginTop: 14 }}>Something went wrong. Please email hello@aurixia.com directly.</p>}
+      {state === "fail" && <p style={{ color: "#c0392b", marginTop: 14 }}>Something went wrong. Please email {SITE.email} directly.</p>}
     </form>
   );
 }

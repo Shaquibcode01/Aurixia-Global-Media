@@ -120,8 +120,8 @@ export const PROCESS = [
 
 export const CHANNELS = [
   { id: "seo", label: "SEO", value: 30, color: "#C5A042" },
-  { id: "paid", label: "Paid", value: 25, color: "#1F2BB5" },
-  { id: "social", label: "Social", value: 25, color: "#A9CF46" },
+  { id: "paid", label: "Paid", value: 25, color: "#000080" },
+  { id: "social", label: "Social", value: 25, color: "#6B6BC4" },
   { id: "content", label: "Content", value: 20, color: "#E3CFA0" },
 ];
 
@@ -137,10 +137,10 @@ export const CASES = [
     cat: "Performance Marketing",
     duration: "3 months",
     industry: "D2C Food & Beverage",
-    client: "Zestify Foods",
+    client: "Confidential client",
     title: "From ₹4L to ₹38L monthly revenue on paid alone.",
     challenge:
-      "Zestify had great product-market fit offline but their paid campaigns were burning budget at a 1.4x return with no clear audience structure.",
+      "The brand had great product-market fit offline but their paid campaigns were burning budget at a 1.4x return with no clear audience structure.",
     solution:
       "We rebuilt the account around full-funnel audiences, launched creative testing sprints, and rebuilt the landing pages for mobile-first conversion.",
     tags: ["Meta Ads", "Google Shopping", "CRO"],
@@ -154,16 +154,16 @@ export const CASES = [
     cat: "Brand Identity",
     duration: "6 weeks",
     industry: "Ayurvedic Beauty & Wellness",
-    client: "Veda Wellness",
-    title: "A 6-year-old brand that finally looked like it belonged on Nykaa.",
+    client: "Confidential client",
+    title: "A 6-year-old brand that finally looked premium-retail ready.",
     challenge:
-      "Veda had loyal customers but dated branding that was holding them back from premium retail and D2C growth. Their visual identity didn't reflect the quality of their products.",
+      "The brand had loyal customers but dated branding that was holding them back from premium retail and D2C growth. Their visual identity didn't reflect the quality of their products.",
     solution:
       "Complete brand identity overhaul — new logo system, earthy-premium colour palette, packaging redesign, and a brand guidelines document that their in-house team could execute consistently.",
     tags: ["Brand Identity", "Packaging Design", "Brand Guidelines"],
     results: [
       ["2.3X", "Increase in average order value post-rebrand"],
-      ["NYKAA", "Listed on Nykaa within 4 months of rebrand"],
+      ["3", "Premium retail listings secured within 4 months"],
       ["41%", "Increase in website conversion rate"],
     ],
   },
@@ -171,10 +171,10 @@ export const CASES = [
     cat: "Social Media",
     duration: "4 months",
     industry: "Real Estate",
-    client: "UrbanNest Realty",
+    client: "Confidential client",
     title: "12,000 qualified leads from Instagram in one quarter.",
     challenge:
-      "UrbanNest was running generic real estate content with 0.4% engagement and no lead pipeline from social. Their competitors were dominating Instagram with aspirational content.",
+      "The developer was running generic real estate content with 0.4% engagement and no lead pipeline from social. Their competitors were dominating Instagram with aspirational content.",
     solution:
       "We repositioned their social presence around lifestyle storytelling — neighbourhood guides, architect interviews, and resident testimonial reels. Combined with a targeted lead-gen campaign, we built a pipeline that their sales team could work.",
     tags: ["Instagram", "Reels", "Lead Gen"],
@@ -188,10 +188,10 @@ export const CASES = [
     cat: "SEO",
     duration: "8 months",
     industry: "EdTech",
-    client: "LearnLoop Academy",
+    client: "Confidential client",
     title: "From page 6 to position 1 for 140 high-intent keywords.",
     challenge:
-      "LearnLoop's courses were great, but organic traffic was flat. Competitors with larger budgets owned every commercial keyword in the category.",
+      "The courses were great, but organic traffic was flat. Competitors with larger budgets owned every commercial keyword in the category.",
     solution:
       "A technical clean-up, topic-cluster content strategy and a focused digital PR programme built authority where it counted — fast.",
     tags: ["Technical SEO", "Topic Clusters", "Link Building"],
@@ -205,10 +205,10 @@ export const CASES = [
     cat: "Content",
     duration: "5 months",
     industry: "B2B SaaS",
-    client: "Stackwise",
+    client: "Confidential client",
     title: "Thought leadership that filled a 6-month sales pipeline.",
     challenge:
-      "Stackwise sold to CFOs but had no voice in the category. Sales cycles were long and outbound was getting ignored.",
+      "The company sold to CFOs but had no voice in the category. Sales cycles were long and outbound was getting ignored.",
     solution:
       "We launched a research-led content programme — a quarterly benchmark report, executive newsletters and LinkedIn thought leadership — all feeding a gated nurture flow.",
     tags: ["Research Report", "Newsletter", "LinkedIn"],

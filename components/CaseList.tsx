@@ -19,14 +19,14 @@ export default function CaseList() {
       </div>
       <div className="wrap" style={{ paddingTop: 56, paddingBottom: 96 }} key={cat}>
         {list.map((c, i) => (
-          <article className="case case-enter" key={c.client} style={{ animationDelay: `${i * 110}ms` }}>
+          <article className="case case-enter" key={c.title} style={{ animationDelay: `${i * 110}ms` }}>
             <div className="case-main">
               <div className="case-meta">
                 <span className="cat"><Icon name="tag" size={14} />{c.cat}</span>
                 <span><Icon name="clock" size={14} />{c.duration}</span>
                 <span>{c.industry}</span>
               </div>
-              <div className="case-client">{c.client}</div>
+              <div className="case-client">{c.client} · {c.industry}</div>
               <h3 className="h3">{c.title}</h3>
               <div className="case-cols">
                 <div><h6>The challenge</h6><p>{c.challenge}</p></div>
