@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { NAV } from "@/lib/data";
 import { SITE } from "@/lib/site";
+import Icon from "./Icons";
 
 export default function Footer() {
   return (
@@ -18,15 +19,15 @@ export default function Footer() {
           </div>
           <div>
             <h5>Connect</h5>
-            <ul>
-              <li><p>{SITE.address}</p></li>
-              <li><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
-              <li><a href={SITE.phoneHref}>{SITE.phone}</a></li>
+            <ul className="foot-contact">
+              <li><span className="ci"><Icon name="pin" size={18} /></span><p>{SITE.address}</p></li>
+              <li><span className="ci"><Icon name="mail" size={18} /></span><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+              <li><span className="ci"><Icon name="phone" size={18} /></span><a href={SITE.phoneHref}>{SITE.phone}</a></li>
             </ul>
             <div className="socials">
-              <a href="https://instagram.com" target="_blank" rel="noreferrer">Instagram</a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
-              <a href="https://x.com" target="_blank" rel="noreferrer">Twitter / X</a>
+              <a href={SITE.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><Icon name="instagram" size={20} /></a>
+              <a href={SITE.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><Icon name="linkedin" size={20} /></a>
+              <a href={SITE.gmb} target="_blank" rel="noreferrer" aria-label="Google Business Profile" title="Google Business Profile"><Icon name="store" size={20} /></a>
             </div>
           </div>
         </div>

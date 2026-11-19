@@ -475,3 +475,10 @@ input[type="range"]::-moz-range-thumb { width: 18px; height: 18px; border-radius
 .art-orbit.slow { animation-duration: 8s; animation-direction: reverse; }
 @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-12px); } }
 @media (prefers-reduced-motion: reduce) { .art-bar, .art-line, .art-dot, .art-orbit { animation: none; stroke-dashoffset: 0; opacity: 1; } }
+
+/* footer contact + social icons */
+.foot-contact li { display: flex; gap: 12px; align-items: flex-start; }
+.foot-contact .ci { flex: none; width: 36px; height: 36px; border-radius: 10px; background: #eceefa; color: var(--gold); display: grid; place-items: center; margin-top: -4px; }
+.foot-contact li a:hover { padding-left: 0; }
+.socials a { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--navy); transition: all .3s var(--ease); }
+.socials a:hover { background: var(--navy); color: var(--gold); border-color: var(--navy); transform: translateY(-3px); }
