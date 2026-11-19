@@ -3,7 +3,6 @@ import { Bebas_Neue, DM_Sans, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import MapSection from "@/components/MapSection";
 import Effects from "@/components/Effects";
 import CookieBanner from "@/components/CookieBanner";
 
@@ -26,7 +25,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Effects />
         <Header />
         <main>{children}</main>
-        <MapSection />
         <Footer />
         <CookieBanner />
       </body>

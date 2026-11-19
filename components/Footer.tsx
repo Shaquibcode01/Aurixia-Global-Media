@@ -4,6 +4,8 @@ import { NAV } from "@/lib/data";
 import { SITE } from "@/lib/site";
 import Icon from "./Icons";
 
+const MAPQ = encodeURIComponent("808B, DLF Prime Tower, Pocket F, Okhla Phase I, Okhla Industrial Estate, New Delhi 110020");
+
 export default function Footer() {
   return (
     <footer className="footer">
@@ -28,6 +30,21 @@ export default function Footer() {
               <a href={SITE.instagram} target="_blank" rel="noreferrer" aria-label="Instagram" title="Instagram"><Icon name="instagram" size={20} /></a>
               <a href={SITE.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" title="LinkedIn"><Icon name="linkedin" size={20} /></a>
               <a href={SITE.gmb} target="_blank" rel="noreferrer" aria-label="Google Business Profile" title="Google Business Profile"><Icon name="store" size={20} /></a>
+            </div>
+          </div>
+          <div>
+            <h5>Find us</h5>
+            <div className="mini-map">
+              <iframe
+                title="Aurixia Global Media office on Google Maps"
+                src={`https://www.google.com/maps?q=${MAPQ}&output=embed&z=15`}
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="mini-map-bar">
+                <a href={SITE.gmb} target="_blank" rel="noreferrer"><Icon name="store" size={15} /> View on Google</a>
+                <a href={`https://www.google.com/maps/dir/?api=1&destination=${MAPQ}`} target="_blank" rel="noreferrer"><Icon name="pin" size={15} /> Directions</a>
+              </div>
             </div>
           </div>
         </div>
