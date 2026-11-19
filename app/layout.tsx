@@ -21,7 +21,7 @@ export const viewport: Viewport = { themeColor: "#000080" };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${bebas.variable} ${dm.variable} ${playfair.variable}`}>
-      <body>
+      <body suppressHydrationWarning>
         <Effects />
         <Header />
         <main>{children}</main>
